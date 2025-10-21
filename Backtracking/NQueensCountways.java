@@ -1,0 +1,78 @@
+package Backtracking;
+
+public class NQueensCountways {
+
+    // Duplicate nQueens method removed.
+
+    public static void printBoard(char board[][]) {
+        System.out.println("-----Chess Board-----");
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static boolean isSafe(char board[][], int row, int col) {
+        // vertical up
+        for (int i = row - 1; i >= 0; i--) {
+            if (board[i][col] == 'Q') {
+                return false;
+            }
+        }
+        // diagonal left up
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+            if (board[i][j] == 'Q') {
+                return false;
+            }
+        }
+        // diagonal right up
+        for (int i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++) {
+            if (board[i][j] == 'Q') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void nQueens(char board[][], int row) {
+        // base case
+        if (row == board.length) {
+            count++;
+            // printBoard(board);
+            return;
+        }
+        // column loop
+        for (int j = 0; j < board.length; j++) {  // try to place queen in every column
+            if (isSafe(board, row, j)) {             // place queen if it is safe
+                board[row][j] = 'Q'; // place queen
+                nQueens(board, row + 1); // function call
+                board[row][j] = 'x'; // backtrack
+            }
+        }
+    }
+
+    static int count = 0;
+
+    public static void main(String[] args) {
+        int n = 4;
+        char board[][] = new char[n][n];
+        // initialize chess board
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                board[i][j] = 'x';
+            }
+        }
+        nQueens(board, 0);
+        System.out.println("Total ways to place n queens: " + count);
+    }
+}
+
+
+// Output:
+// Total ways to place n queens: 2
+// Explanation:
+// There are 2 distinct ways to place 4 queens on a 4x4 chessboard such that no two queens threaten each other.
+// The count variable keeps track of the number of valid configurations found by the nQueens function.
+// The printBoard function is commented out in the base case to avoid printing all configurations, but it can be uncommented to see each arrangement.
