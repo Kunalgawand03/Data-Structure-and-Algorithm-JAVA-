@@ -32,3 +32,15 @@ public class MaxSubarraySum2 {
     }
 }
 
+
+//output:
+// Maximum subarray sum is: 8
+// Time Complexity: O(n^2)
+// Space Complexity: O(n)
+// Explanation://
+// The code first constructs a prefix sum array to store the cumulative sums of the input array.
+// It then iterates through all possible subarrays using two nested loops.
+// For each subarray defined by the starting index 'i' and ending index 'j', it calculates the current sum using the prefix sum array.
+// If the starting index is 0, the current sum is simply the prefix sum at the ending index.
+// Otherwise, it subtracts the prefix sum at the index before the starting index from the prefix sum at the ending index.
+// The maximum sum is updated whenever the current sum exceeds it.
