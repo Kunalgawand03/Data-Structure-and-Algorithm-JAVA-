@@ -33,3 +33,18 @@ public class TrappedRainwater {
         System.out.println("Trapped rainwater is: " + result);
     }
 }
+
+
+//output:
+// Trapped rainwater is: 6
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+// Explanation:
+// The code first calculates the maximum height to the left of each index and stores it in the leftMax array.
+// It then calculates the maximum height to the right of each index and stores it in the right
+// max array.
+// Finally, it iterates through each index to calculate the water level, which is the minimum of
+// the left max and right max at that index.
+// The trapped water at each index is then calculated by subtracting the height at that index
+// from the water level, and the total trapped water is accumulated and returned.
+// This approach ensures that we only traverse the array a few times, resulting in a linear time complexity of O(n).
