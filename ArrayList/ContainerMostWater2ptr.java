@@ -39,3 +39,8 @@ public class ContainerMostWater2ptr {
 }
 
 // Output: max water that can be stored is = 49
+// Explanation: The code defines a method to calculate the maximum amount of water that can be contained between two lines represented by an ArrayList of heights.
+// It uses a two-pointer technique to efficiently evaluate potential container boundaries, calculating the area formed by
+// each pair and updating the maximum area found.
+// The main method demonstrates the usage of this function with a sample list of heights and prints the
+// result.
