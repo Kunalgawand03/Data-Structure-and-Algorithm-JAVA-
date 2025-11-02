@@ -1,5 +1,4 @@
 package ArrayList;
-
 import java.util.ArrayList;
 
 public class FindMax {
@@ -27,3 +26,4 @@ public class FindMax {
 // max element is = 9
 // Explanation: The code initializes an ArrayList with integers and then iterates through the list to find the maximum element by comparing each element with the current maximum. Finally, 
 //it prints the maximum element found in the list.
+
