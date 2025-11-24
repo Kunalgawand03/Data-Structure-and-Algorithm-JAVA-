@@ -1,4 +1,5 @@
 package Strings;
+import java.util.*;
 
 public class LetterstoUppercase {
     public static String toUppercase(String str){
@@ -28,4 +29,5 @@ public class LetterstoUppercase {
 
 // Output: 
 //Converted String: Hello World This Is Java
+
 
