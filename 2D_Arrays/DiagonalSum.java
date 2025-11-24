@@ -38,3 +38,10 @@ public class DiagonalSum {
         System.out.println("Diagonal Sum: " + diagonalSum(matrix)); // Output: 25
     }
 }
+
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+//Output:
+//Diagonal Sum: 68
