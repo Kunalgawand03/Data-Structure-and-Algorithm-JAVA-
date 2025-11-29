@@ -46,10 +46,8 @@ public class 7_JobScheduling {
     }
 }
 
-
 //Output:
 //Scheduled Jobs IDs: [2, 3, 0]
 //J2 J3 J0
 //Explanation: The selected jobs are J2 (profit 40), J3 (profit 30), and J0 (profit 20) within their deadlines.
 // Note: Job J1 is not selected as it has lower profit and cannot fit within the deadlines of other jobs.
-
