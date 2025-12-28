@@ -9,6 +9,7 @@ public class 10_Zig-zagLL {
             slow = slow.next;
             fast = fast.next.next;
         }
+    
 
         // reverse 2nd half
         Node curr = slow.next;
@@ -69,5 +70,6 @@ public class 10_Zig-zagLL {
 
 // Time Complexity: O(n)
 // Space Complexity: O(1)
+
 
 // LeetCode Link: https://leetcode.com/problems/reorder-list/
